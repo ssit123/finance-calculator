@@ -150,11 +150,13 @@ with st.expander("ℹ️ How to use this tool", expanded=False):
     """)
 
 st.sidebar.header("🔧 Master Inputs")
+st.sidebar.write("These inputs apply to all calculations and represent your overall retirement planning horizon and economic assumptions.")
 ms_years = st.sidebar.number_input("Years to Retirement", min_value=1, value=37, help="Years until you plan to retire.")
 ms_annual_increase = st.sidebar.number_input("Annual Increase in Investment (%)", min_value=0.0, value=10.0, help="Yearly % increase in investments.") / 100.0
 ms_inflation_rate = st.sidebar.number_input("Inflation Rate (%)", min_value=0.0, value=7.0, help="Avg annual inflation rate.") / 100.0
 
 st.sidebar.header("🛡️ NPS Inputs")
+st.sidebar.write("Specify the details for your NPS investments.")
 ms_nps_annual_investment = st.sidebar.number_input("Annual Investment (₹)", min_value=0, value=96589)
 ms_nps_expected_return = st.sidebar.number_input("Expected Return (%)", min_value=0.0, value=12.0) / 100.0
 ms_nps_lumpsum_withdrawal_percent = st.sidebar.number_input("Lumpsum Withdrawal (%)", min_value=0.0, max_value=100.0, value=0.0) / 100.0
@@ -163,10 +165,12 @@ ms_nps_life_expectancy = st.sidebar.number_input("Life Expectancy (Years)", min_
 ms_targeted_pension_today = st.sidebar.number_input("Target Monthly Pension (Today's ₹)", min_value=0, value=100000)
 
 st.sidebar.header("🛡️ EPF Inputs")
+st.sidebar.write("Specify the details for your EPF contributions.")
 ms_epf_monthly_investment = st.sidebar.number_input("Monthly Investment (₹)", min_value=0, value=15000)
 ms_epf_annual_interest_rate = st.sidebar.number_input("Annual Interest Rate (%)", min_value=0.0, value=8.25) / 100.0
 
 st.sidebar.header("🛡️ PPF Inputs")
+st.sidebar.write("Specify the details for your PPF investments.")
 ms_ppf_annual_investment = st.sidebar.number_input("Annual Investment (₹)", min_value=0, value=150000)
 ms_ppf_annual_interest_rate = st.sidebar.number_input("Annual Interest Rate (%)", min_value=0.0, value=7.1) / 100.0
 
